@@ -20,7 +20,7 @@ A priori, le projet s’articulerai de la manière suivante :
 5.	Développement et utilisation de l’algorithme
 
 Voilà comment je vois les choses :
--	La veille de chaque vente, je récupère toutes les informations que j'aurai choisi de récupérer comme ça je disposerai des infos sur le prix suivantes (cote, prix neuf et mise à prix). Environ 20 colonnes (variables)
+- Chaque jour, je lancerai mon programme pour récupérer les dates de ventes de TOUS les véhicules disponibles sur le site. Si la date du jour correspond à des dates de vente de vehicules du site alors je scrapperai UNIQUEMENT les liens pour lesquels date_today = date_vente_veh (soucis d'économie de temps et de ressources).
 -	Le soir de la vente, je récupère l'info complémentaire et primordiale de savoir si le véhicule a été adjugé (prix adjugé) ou pas. 2 colonnes supplémentaires (Adjugé = Oui/Non et Prix_Adj)
 
 ## ETAPE(S) EN COURS :

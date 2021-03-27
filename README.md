@@ -9,7 +9,7 @@ Actuellement, lorsque j’accède au site https://vpauto.fr et que je clique sur
 En effet, par exemple pour la vente d’aujourd’hui (ce matin/début après-midi), la base contient des véhicules qui ont été adjugé, ils disposent des infos suivantes sur le prix (cote, prix neuf et prix adjugé) quant aux véhicules n’ayant pas trouvé preneur, les infos sur le prix sont les suivantes (cote, prix neuf, mise à prix).
 Pour les ventes à venir, j'ai deux types de véhicules, ceux qui ont êtes expertises et qui ont reçu une mise à prix et les autres qui ne sont toujours pas expertises et qui sont « en attente d’estimation ».
 Il y a également un risque de redondance que je ne sais pas encore comment éviter… Par exemple un véhicule non-adjugé lors d'une vente mais qui pourrait être proposer lors d'une vente ultérieure et cette fois adjugé…
-Mon objectif final sera de disposer d’une base de données auto-alimentée qui me permettra entre autres de prédire si un véhicule sera vendu (adjugé) ou pas.
+Mon objectif final sera de disposer d’une base de données auto-alimentée qui me permettra entre autres de prédire si un véhicule sera vendu (adjugé) ou pas et à combien.
 
 ## COMMENT PROCEDER :
 A priori, le projet s’articulerai de la manière suivante :
@@ -20,7 +20,7 @@ A priori, le projet s’articulerai de la manière suivante :
 5.	Développement et utilisation de l’algorithme
 
 Voilà comment je vois les choses :
-- Chaque jour, je lancerai mon programme pour récupérer les dates de ventes de TOUS les véhicules disponibles sur le site. Si la date du jour correspond à des dates de vente de vehicules du site alors je scrapperai UNIQUEMENT les liens pour lesquels date_today = date_vente_veh (soucis d'économie de temps et de ressources).
+- Chaque jour, je lancerai mon programme à 08h00 pour récupérer les dates de ventes de TOUS les véhicules disponibles sur le site. Si la date du jour correspond à des dates de vente de vehicules du site alors je scrapperai UNIQUEMENT les liens pour lesquels date_today = date_vente_veh (soucis d'économie de temps et de ressources).
 -	Le soir de la vente, je récupère l'info complémentaire et primordiale de savoir si le véhicule a été adjugé (prix adjugé) ou pas. 2 colonnes supplémentaires (Adjugé = Oui/Non et Prix_Adj)
 
 ## ETAPE(S) EN COURS :
